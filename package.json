@@ -1,0 +1,30 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "a pixel parser script",
+  "main": "scripts/PixelParser.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pixel",
+    "parse"
+  ],
+  "author": "Mike Dobekidis",
+  "license": "MIT",
+  "dependencies": {
+    "@gltf-transform/core": "^3.10.1",
+    "@gltf-transform/extensions": "^3.10.1",
+    "@gltf-transform/functions": "^3.10.1",
+    "canvas": "^2.11.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "gltf-js-utils": "^7.0.0",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.33.3"
+  },
+  "optionalDependencies": {
+    "@img/sharp-win32-x64": "^0.33.3"
+  }
+}
