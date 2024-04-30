@@ -70,8 +70,8 @@ async function analyzeImage(imagePath) {
   }
 
   // Iterate based on the detected pixel size
-  for (let y = 0; y < image.height; y += pixelSize - 1) {
-    for (let x = 0; x < image.width; x += pixelSize - 1) {
+  for (let y = 0; y < image.height; y += Math.max(pixelSize - 1, 1)) {
+    for (let x = 0; x < image.width; x += Math.max(pixelSize - 1, 1)) {
       const index = (y * image.width + x) * 4;
       const r = pixels[index];
       const g = pixels[index + 1];
@@ -99,7 +99,7 @@ async function analyzeImage(imagePath) {
     pixelData,
     width: image.width,
     height: image.height,
-    pixelSize: pixelSize - 1,
+    pixelSize: Math.max(pixelSize - 1, 1),
   };
 }
 
